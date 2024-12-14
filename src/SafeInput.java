@@ -1,10 +1,4 @@
 
-/*
-* @param pipe is a scanner opened to read from System.in
-* @param prompt is a prompt for the user
-* @return is a string response that is not zero length
- */
-
 import java.util.Scanner;
 
 public class SafeInput {
@@ -96,7 +90,7 @@ public class SafeInput {
         boolean retBool = false;
         boolean valid = false;
         do {
-            System.out.print(prompt + ": ");
+            System.out.print(prompt + " (Y/N): ");
             answer = pipe.nextLine();
             if(answer.equalsIgnoreCase("Y") || answer.equalsIgnoreCase("N")) {
                 valid = true;
